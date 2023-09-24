@@ -1,5 +1,0 @@
-# Project exclude paths
-/.
-
-!runConfigurations/
-!runConfigurations/*
