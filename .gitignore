@@ -22,6 +22,9 @@ scripts/node_modules
 !*.md
 !LICENSE
 
+## Configuration
+!.editorconfig
+
 ## Source code, except generated
 !src/
 src/generated
