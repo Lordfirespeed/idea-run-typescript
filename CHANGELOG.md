@@ -1,16 +1,42 @@
-# Change Log
+<!-- Keep a Changelog guide -> https://keepachangelog.com -->
+# `idea-run-typescript` Changelog
 
 All notable changes to this project will be documented in this file.
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2022.11.14-1](https://github.com/bluelovers/idea-run-typescript/compare/idea-run-typescript@2021.12.02-0...idea-run-typescript@2022.11.14-1) (2022-11-14)
+## [Unreleased]
 
+### ✨　Features
+
+* tsx support
+
+
+### 🐛　Bug Fixes
+
+### 📦　Code Refactoring
+
+* package name `io.plugin.tsnode` -> `com.github.bluelovers.idea_ts_run_configuration`
+* near full rewrite to use modern JetBrains API and remove references to deprecated members
+
+
+### 🛠　Build System
+
+* update to Gradle 8.2.1
+* migrate from Groovy DSL to Kotlin DSL
+* migrate from `buildscript` to `plugins`
+* use a version catalog
+
+
+
+
+
+## [2022.11.14-1](https://github.com/bluelovers/idea-run-typescript/compare/idea-run-typescript@2021.12.02-0...idea-run-typescript@2022.11.14-1) (2022-11-14)
 
 
 ### ✨　Features
 
 * add detect tsx / esno ([09aa303](https://github.com/bluelovers/idea-run-typescript/commit/09aa303f50121b0074c3d6161e94f6a7f92d4ffb))
-
 
 
 ## [2021.12.2-0](https://github.com/bluelovers/idea-run-typescript/compare/idea-run-typescript@2021.10.11-1...idea-run-typescript@2021.12.2-0) (2021-12-01)
