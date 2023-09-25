@@ -216,7 +216,7 @@ project(":plugin") {
 			version.set(project.version.toString())
 
 			// Extract the <!-- Plugin description --> section from README.md and provide for the plugin's manifest
-			pluginDescription.set(providers.fileContents(layout.projectDirectory.file("README.md")).asText.map {
+			pluginDescription.set(providers.fileContents(rootProject.layout.projectDirectory.file("README.md")).asText.map {
 				val start = "<!-- Plugin description -->"
 				val end = "<!-- Plugin description end -->"
 
