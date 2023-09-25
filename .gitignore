@@ -1,5 +1,11 @@
-# Exclude everything
+# Exclude everything in each project
+
+## Root Project
 /*
+
+## Plugin Project
+!plugin/
+plugin/*
 
 # Include specifically
 
