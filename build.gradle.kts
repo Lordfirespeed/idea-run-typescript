@@ -6,7 +6,6 @@ import org.jetbrains.intellij.tasks.SignPluginTask
 import org.jetbrains.intellij.tasks.RunIdeTask
 import org.gradle.api.JavaVersion.VERSION_17
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.gradle.nativeplatform.platform.internal.DefaultNativePlatform
 
 fun properties(key: String) = providers.gradleProperty(key)
 fun environment(key: String) = providers.environmentVariable(key)
