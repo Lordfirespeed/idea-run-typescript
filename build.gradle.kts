@@ -157,7 +157,7 @@ project(":plugin") {
 
 	// Add plugin sources to the plugin ZIP.
 	// gradle-intellij-plugin will use it as a plugin sources if the plugin is used as a dependency
-	val createSourceJar = task<Jar>("createSourceJar") {
+	val createSourceJarTask = task<Jar>("createSourceJar") {
 		for (prj in pluginProjects) {
 			from(prj.kotlin.sourceSets.main.get().kotlin) {
 				include("**/*.java")
@@ -173,8 +173,8 @@ project(":plugin") {
 
 	tasks {
 		buildPlugin {
-			dependsOn(createSourceJar)
-			from(createSourceJar) { into("lib/src") }
+			dependsOn(createSourceJarTask)
+			from(createSourceJarTask) { into("lib/src") }
 		}
 
 		runIde {
