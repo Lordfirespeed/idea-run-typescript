@@ -1,0 +1,33 @@
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>JavaScript</depends>
+  <depends>JavaScriptDebugger</depends>
+  <depends>NodeJS</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <configurationType implementation="com.github.bluelovers.idea_ts_run_configuration.execution.TsConfigurationType"/>
+    <programRunner implementation="com.github.bluelovers.idea_ts_run_configuration.execution.TsProgramRunner"/>
+    <runConfigurationProducer implementation="com.github.bluelovers.idea_ts_run_configuration.execution.TsRunConfigurationProducer"/>
+    <postStartupActivity implementation="com.github.bluelovers.idea_ts_run_configuration.activity.PluginStartupActivity"/>
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.github.bluelovers.idea_ts_run_configuration.action.DebugTsAction" class="com.github.bluelovers.idea_ts_run_configuration.action.DebugTsAction" text="Debug TypeScript" description="Debug TypeScript">
+      <add-to-group group-id="ProjectViewPopupMenuRunGroup" anchor="first"/>
+      <add-to-group group-id="EditorPopupMenuDebug" anchor="first"/>
+      <add-to-group group-id="EditorTabPopupMenuEx" relative-to-action="RunContextPopupGroup" anchor="before"/>
+    </action>
+  </actions>
+
+</idea-plugin>
