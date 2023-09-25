@@ -1,0 +1,9 @@
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude" url="https://github.com/bluelovers/idea-run-typescript">
+  <id>com.github.bluelovers.idea_ts_run_configuration</id>
+  <name>Run Configuration for TypeScript</name>
+
+  <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-run-typescript">bluelovers</vendor>
+  <category>JavaScript</category>
+
+  <xi:include href="/META-INF/plugin-core.xml" xpointer="xpointer(/idea-plugin/*)"/>
+</idea-plugin>
