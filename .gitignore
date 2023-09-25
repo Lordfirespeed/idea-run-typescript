@@ -32,9 +32,9 @@ scripts/node_modules
 
 ## Source code, except generated
 !src/
-src/generated
-out
-build
+src/generated/
+out/
+build/
 
 ## Git
 !.gitmodules
