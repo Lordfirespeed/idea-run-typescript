@@ -1,4 +1,5 @@
-[![jetbrains.svg](jetbrains.svg)](https://www.jetbrains.com/?from=novel-segment)
+<!-- Plugin description -->
+[![jetbrains.svg](readme-assets/jetbrains.svg)](https://www.jetbrains.com/?from=novel-segment)
 
 # Run Configuration for TypeScript
 
@@ -13,7 +14,7 @@
 1. via jetbrains [https://plugins.jetbrains.com/plugin/10841-run-configuration-for-typescript](https://plugins.jetbrains.com/plugin/10841-run-configuration-for-typescript)
 2. github [idea-run-typescript.jar](releases/idea-run-typescript.jar) /  [idea-run-typescript.zip](releases/idea-run-typescript.zip)
 
-# feature
+# features
 
 - run .tsx? by ts-node like bin tool (e.g. ts-node , [esm-ts-node](https://www.npmjs.com/package/esm-ts-node))
 - allow use env var `NODEJS_CONSOLE_USE_TERMINAL` for control Registry `nodejs.console.use.terminal` in Run Configuration bu this plugin
@@ -22,27 +23,27 @@
 - support set argv for node, ts-node, current file
 - support scratch file
 
-[CHANGELOG.md](./CHANGELOG.md)
+[CHANGELOG.md](CHANGELOG.md)
 
-# screenshot
+# screenshots
 
 > support run/debug `.ts` , `.tsx`
 
-![ShareX_2020-03-04-00-11-01-496.png](readme/ShareX_2020-03-04-00-11-01-496.png)
+![ShareX_2020-03-04-00-11-01-496.png](readme-assets/ShareX_2020-03-04-00-11-01-496.png)
 
 > support scratch file
 
-![ShareX_2020-02-19-13-20-08-028.png](readme/ShareX_2020-02-19-13-20-08-028.png)
+![ShareX_2020-02-19-13-20-08-028.png](readme-assets/ShareX_2020-02-19-13-20-08-028.png)
 
 > support select `esm-ts-node`, `ts-node`
 
-![ShareX_2020-03-04-00-06-57-786.png](readme/ShareX_2020-03-04-00-06-57-786.png)
+![ShareX_2020-03-04-00-06-57-786.png](readme-assets/ShareX_2020-03-04-00-06-57-786.png)
 
 > other
 
-![run001.jpg](readme/run001.jpg)
-![run002.jpg](readme/run002.jpg)
-![run003.jpg](readme/run003.jpg)
+![run001.jpg](readme-assets/run001.jpg)
+![run002.jpg](readme-assets/run002.jpg)
+![run003.jpg](readme-assets/run003.jpg)
 
 # about this plugin
 
@@ -66,9 +67,9 @@ JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
 Windows 10 10.0
 ```
 
-![](readme/ShareX_2020-02-18-21-02-20-415.png)
+![](readme-assets/ShareX_2020-02-18-21-02-20-415.png)
 
-## link
+## links
 
 - https://github.com/JetBrains/intellij-community
 - https://zh.wikipedia.org/wiki/Kotlin
@@ -82,4 +83,6 @@ Windows 10 10.0
 - https://plugins.jetbrains.com/docs/marketplace/intellij-plugin-recommendations.html
 -
 
-Icons made by [Freepik](https://www.freepik.com/) from [www.flaticon.com](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+Icons made by [Freepik](https://www.freepik.com/) are sourced from [www.flaticon.com](https://www.flaticon.com/)
+and are licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+<!-- Plugin description end -->
