@@ -8,10 +8,9 @@
   <depends>NodeJS</depends>
 
   <extensions defaultExtensionNs="com.intellij">
-    <configurationType implementation="com.github.bluelovers.idea_ts_run_configuration.execution.TsConfigurationType"/>
-    <programRunner implementation="com.github.bluelovers.idea_ts_run_configuration.execution.TsProgramRunner"/>
-    <runConfigurationProducer implementation="com.github.bluelovers.idea_ts_run_configuration.execution.TsRunConfigurationProducer"/>
-    <postStartupActivity implementation="com.github.bluelovers.idea_ts_run_configuration.activity.PluginStartupActivity"/>
+    <!-- Add your extensions here -->
+    <configurationType implementation="com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunConfigurationType"/>
+    <runConfigurationProducer implementation="com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunConfigurationProducer"/>
   </extensions>
 
   <application-components>
@@ -24,11 +23,6 @@
 
   <actions>
     <!-- Add your actions here -->
-    <action id="com.github.bluelovers.idea_ts_run_configuration.action.DebugTsAction" class="com.github.bluelovers.idea_ts_run_configuration.action.DebugTsAction" text="Debug TypeScript" description="Debug TypeScript">
-      <add-to-group group-id="ProjectViewPopupMenuRunGroup" anchor="first"/>
-      <add-to-group group-id="EditorPopupMenuDebug" anchor="first"/>
-      <add-to-group group-id="EditorTabPopupMenuEx" relative-to-action="RunContextPopupGroup" anchor="before"/>
-    </action>
   </actions>
 
 </idea-plugin>
