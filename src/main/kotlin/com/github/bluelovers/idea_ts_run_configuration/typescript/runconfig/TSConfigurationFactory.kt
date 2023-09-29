@@ -15,7 +15,10 @@ class TSConfigurationFactory(type: ConfigurationType): ConfigurationFactory(type
 
 	override fun getIcon(): Icon = TSRunConfigurationIcons.TypeScript
 
+	override fun getId(): String = RUN_CONFIGURATION_ID
+
 	companion object {
 		const val FACTORY_NAME = "TypeScript"
+		const val RUN_CONFIGURATION_ID = "typescript.execute"
 	}
 }
