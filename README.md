@@ -23,7 +23,7 @@
 - support set argv for node, ts-node, current file
 - support scratch file
 
-[CHANGELOG.md](CHANGELOG.md)
+[CHANGELOG.md](plugin/CHANGELOG.md)
 
 # screenshots
 
