@@ -84,5 +84,5 @@ Windows 10 10.0
 -
 
 Icons made by [Freepik](https://www.freepik.com/) are sourced from [www.flaticon.com](https://www.flaticon.com/)
-and are licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)
+and are licensed by [CC 3.0 BY](https://creativecommons.org/licenses/by/3.0/)
 <!-- Plugin description end -->
