@@ -3,9 +3,12 @@ package com.github.bluelovers.idea_ts_run_configuration.typescript
 import com.intellij.ide.util.PropertiesComponent
 import com.intellij.javascript.nodejs.util.NodePackage
 import com.intellij.javascript.nodejs.util.NodePackageRef
+import com.intellij.openapi.components.Service
 import com.intellij.openapi.project.Project
 import com.twelvemonkeys.lang.StringUtil
 
+
+@Service(Service.Level.PROJECT)
 class TSExecuteManager(private val project: Project) {
 	@Volatile
 	var tsExecutePackageRef: NodePackageRef = getDefaultPackageRef()

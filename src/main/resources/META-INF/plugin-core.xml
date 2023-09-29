@@ -17,7 +17,6 @@
                          key="settings.typescript.execute.configurable.name"
                          bundle="messages.TSRunConfigurationBundle"
                          order="last"/>
-    <projectService serviceImplementation="com.github.bluelovers.idea_ts_run_configuration.typescript.TSExecuteManager"/>
   </extensions>
 
   <application-components>
