@@ -45,5 +45,6 @@ class TSRunConfiguration(
 	@Throws(RuntimeConfigurationException::class)
 	override fun checkConfiguration() {
 		super.checkConfiguration()
+		// TODO: this needs to actually check the configuration.
 	}
 }
