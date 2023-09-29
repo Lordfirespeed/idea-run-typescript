@@ -23,7 +23,6 @@ plugin/*
 scripts/node_modules
 
 ## Markdown/Docs
-!readme-assets/
 !*.md
 !LICENSE
 

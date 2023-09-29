@@ -1,5 +1,5 @@
 <!-- Plugin description -->
-[![jetbrains.svg](readme-assets/jetbrains.svg)](https://www.jetbrains.com/?from=novel-segment)
+[![jetbrains.svg](.github/readme/jetbrains.svg)](https://www.jetbrains.com/?from=novel-segment)
 
 # Run Configuration for TypeScript
 
@@ -29,21 +29,21 @@
 
 > support run/debug `.ts` , `.tsx`
 
-![ShareX_2020-03-04-00-11-01-496.png](readme-assets/ShareX_2020-03-04-00-11-01-496.png)
+![ShareX_2020-03-04-00-11-01-496.png](.github/readme/ShareX_2020-03-04-00-11-01-496.png)
 
 > support scratch file
 
-![ShareX_2020-02-19-13-20-08-028.png](readme-assets/ShareX_2020-02-19-13-20-08-028.png)
+![ShareX_2020-02-19-13-20-08-028.png](.github/readme/ShareX_2020-02-19-13-20-08-028.png)
 
 > support select `esm-ts-node`, `ts-node`
 
-![ShareX_2020-03-04-00-06-57-786.png](readme-assets/ShareX_2020-03-04-00-06-57-786.png)
+![ShareX_2020-03-04-00-06-57-786.png](.github/readme/ShareX_2020-03-04-00-06-57-786.png)
 
 > other
 
-![run001.jpg](readme-assets/run001.jpg)
-![run002.jpg](readme-assets/run002.jpg)
-![run003.jpg](readme-assets/run003.jpg)
+![run001.jpg](.github/readme/run001.jpg)
+![run002.jpg](.github/readme/run002.jpg)
+![run003.jpg](.github/readme/run003.jpg)
 
 # about this plugin
 
@@ -67,7 +67,7 @@ JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
 Windows 10 10.0
 ```
 
-![](readme-assets/ShareX_2020-02-18-21-02-20-415.png)
+![](.github/readme/ShareX_2020-02-18-21-02-20-415.png)
 
 ## links
 
