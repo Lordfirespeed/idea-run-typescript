@@ -9,10 +9,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### ✨　Features
 
-* tsx support
+* tsx support!
+* selecting a 'Project' ts execute package (via Preferences -> Languages + Frameworks -> TypeScript -> Execute)
 
 
 ### 🐛　Bug Fixes
+
 
 ### 📦　Code Refactoring
 
@@ -26,6 +28,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * migrate from Groovy DSL to Kotlin DSL
 * migrate from `buildscript` to `plugins`
 * use a version catalog
+* use Gradle tasks instead of JavaScript to patch XML
 
 
 
