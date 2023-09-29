@@ -9,8 +9,8 @@ import com.intellij.openapi.util.NotNullLazyValue
 
 class TSRunConfigurationType: ConfigurationTypeBase(
 	"TypeScriptRunConfigurationType",
-	TSRunConfigurationBundle.message("typescript.rc.type.name"),
-		TSRunConfigurationBundle.message("typescript.rc.run.configuration.type.description"),
+	TSRunConfigurationBundle.message("rc.type.name"),
+		TSRunConfigurationBundle.message("rc.run.configuration.type.description"),
 	NotNullLazyValue.lazy { TSRunConfigurationIcons.TypeScript }
 ), DumbAware {
 
