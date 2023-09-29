@@ -3,7 +3,6 @@ package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig
 import com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.ui.TSRunConfigurationEditor
 import com.intellij.execution.ExecutionException
 import com.intellij.execution.Executor
-import com.intellij.execution.RunManager
 import com.intellij.execution.configurations.ConfigurationFactory
 import com.intellij.execution.configurations.RunProfileState
 import com.intellij.execution.configurations.RuntimeConfigurationException
@@ -11,28 +10,18 @@ import com.intellij.execution.runners.ExecutionEnvironment
 import com.intellij.javascript.nodejs.debug.NodeDebugRunConfiguration
 import com.intellij.javascript.nodejs.execution.AbstractNodeTargetRunProfile
 import com.intellij.javascript.nodejs.interpreter.NodeJsInterpreter
-import com.intellij.javascript.nodejs.util.NodePackage
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.InvalidDataException
 import com.intellij.openapi.util.WriteExternalException
 import org.jdom.Element
 
+@Suppress("ACCIDENTAL_OVERRIDE")
 class TSRunConfiguration(
 	project: Project,
 	factory: ConfigurationFactory,
 	name: String
 ): AbstractNodeTargetRunProfile(project, factory, name), NodeDebugRunConfiguration {
 	var runSettings: TSRunSettings = TSRunSettings.builder().build()
-		set(_newSettings) {
-			var newSettings = _newSettings
-			val executorPackage: NodePackage? = newSettings.executePackage
-
-			if (executorPackage != null && executorPackage.isEmptyPath && RunManager.getInstance(this.project).findSettings(this)?.isTemplate == true) {
-				newSettings = newSettings.toBuilder().executePackage(null).build()
-			}
-
-			field = newSettings
-		}
 
 	override val interpreter: NodeJsInterpreter? = this.runSettings.interpreterRef.resolve(this.project)
 
