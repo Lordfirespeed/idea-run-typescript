@@ -2,6 +2,7 @@ import org.jetbrains.changelog.Changelog
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.intellij.tasks.PatchPluginXmlTask
 import org.jetbrains.intellij.tasks.PublishPluginTask
+import org.jetbrains.intellij.tasks.VerifyPluginTask
 import org.jetbrains.intellij.tasks.SignPluginTask
 import org.jetbrains.intellij.tasks.RunIdeTask
 import org.gradle.api.JavaVersion.VERSION_17
@@ -178,7 +179,6 @@ project(":plugin") {
 		}
 
 		runIde {
-			mustRunAfter(mergePluginJarTask)
 			enabled = true
 		}
 
@@ -193,6 +193,8 @@ project(":plugin") {
 		}
 
 		withType<RunIdeTask> {
+			mustRunAfter(mergePluginJarTask)
+
 			// Default args for IDEA installation
 			jvmArgs("-Xmx2G", "-XX:+UseG1GC", "-XX:SoftRefLRUPolicyMSPerMB=50")
 
@@ -240,6 +242,10 @@ project(":plugin") {
 					)
 				}
 			})
+		}
+
+		withType<VerifyPluginTask> {
+			mustRunAfter(mergePluginJarTask)
 		}
 
 		withType<SignPluginTask> {
