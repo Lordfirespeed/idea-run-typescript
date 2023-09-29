@@ -23,7 +23,7 @@ class TSExecutePackageDescriptor(
 		}
 
 		if (this.packageNames.contains(text)) {
-			return NodePackageRef.create(text);
+			return NodePackageRef.create(text)
 		}
 
 		return super.createPackageRef(text)

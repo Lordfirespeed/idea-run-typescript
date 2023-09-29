@@ -36,7 +36,7 @@ class TSRunConfigurationConfigurable(
 	}
 
 	override fun reset() {
-		val view = this.settingsView ?: return;
+		val view = this.settingsView ?: return
 
 		view.tsExecutePackageRef = TSExecuteManager.getInstance(project).tsExecutePackageRef
 	}

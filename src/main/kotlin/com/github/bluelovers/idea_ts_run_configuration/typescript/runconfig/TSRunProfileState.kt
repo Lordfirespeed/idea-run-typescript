@@ -61,7 +61,7 @@ class TSRunProfileState(
 		console.addMessageFilter(NodeConsoleAdditionalFilter(environment.project, cwd))
 		console.addMessageFilter(TypeScriptErrorConsoleFilter(environment.project, cwd))
 
-		return console;
+		return console
 	}
 
 	companion object {

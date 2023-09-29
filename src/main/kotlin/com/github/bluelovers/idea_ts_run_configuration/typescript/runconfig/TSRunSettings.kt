@@ -40,7 +40,7 @@ data class TSRunSettings(
 		.applicationParameters(applicationParameters)
 		.envData(envData)
 
-	fun writeXml(element: Element): Unit {
+	fun writeXml(element: Element) {
 		JDOMExternalizerUtil.writeCustomField(element, TAG_NODE_INTERPRETER, this.interpreterRef.referenceName)
 		JDOMExternalizerUtil.writeCustomField(element, TAG_NODE_OPTIONS, this.nodeOptions)
 		JDOMExternalizerUtil.writeCustomField(element, TAG_WORKING_DIR, FileUtil.toSystemIndependentName(this.workingDirectory))
@@ -118,7 +118,7 @@ data class TSRunSettings(
 		private var myNodeOptions: String = ""
 		private var myWorkingDirectory: String = ""
 		private var myTypescriptProjectFilePath: String = ""
-		private var myExecutePackageRef: NodePackageRef = TSExecuteUtil.createProjectTsExecutePackageRef();
+		private var myExecutePackageRef: NodePackageRef = TSExecuteUtil.createProjectTsExecutePackageRef()
 		private var myExecutePackageOptions: String = ""
 
 		private var myTsNodeUseEsmLoader: Boolean = false
