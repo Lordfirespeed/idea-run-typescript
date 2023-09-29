@@ -1,6 +1,6 @@
 package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig
 
-import com.github.bluelovers.idea_ts_run_configuration.typescript.TSUtil
+import com.github.bluelovers.idea_ts_run_configuration.typescript.TSExecuteUtil
 import com.intellij.execution.actions.ConfigurationContext
 import com.intellij.execution.actions.LazyRunConfigurationProducer
 import com.intellij.execution.configurations.ConfigurationFactory
@@ -22,7 +22,7 @@ class TSRunConfigurationProducer: LazyRunConfigurationProducer<TSRunConfiguratio
 
 		val psiFile = psiElement.containingFile
 
-		if (!TSUtil.isTypeScript(psiFile)) {
+		if (!TSExecuteUtil.isTypeScript(psiFile)) {
 			return false
 		}
 
