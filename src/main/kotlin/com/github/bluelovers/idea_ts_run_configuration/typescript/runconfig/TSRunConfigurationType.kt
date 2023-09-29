@@ -18,7 +18,8 @@ class TSRunConfigurationType: ConfigurationTypeBase(
 		addFactory(TSConfigurationFactory(this))
 	}
 
-	companion object {
+	object Util
+	{
 		fun getInstance() = ConfigurationTypeUtil.findConfigurationType(TSRunConfigurationType::class.java)
 		fun getFactory() = getInstance().configurationFactories[0]
 	}

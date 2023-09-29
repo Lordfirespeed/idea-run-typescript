@@ -10,7 +10,7 @@ import com.intellij.openapi.util.io.FileUtil
 import com.intellij.psi.PsiElement
 
 class TSRunConfigurationProducer: LazyRunConfigurationProducer<TSRunConfiguration>() {
-	override fun getConfigurationFactory(): ConfigurationFactory = TSRunConfigurationType.getFactory()
+	override fun getConfigurationFactory(): ConfigurationFactory = TSRunConfigurationType.Util.getFactory()
 
 	override fun setupConfigurationFromContext(configuration: TSRunConfiguration, context: ConfigurationContext, sourceElement: Ref<PsiElement>): Boolean {
 		val location = context.location ?: return false

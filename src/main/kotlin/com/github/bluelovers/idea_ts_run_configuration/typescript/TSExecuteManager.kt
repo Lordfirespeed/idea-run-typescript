@@ -30,7 +30,7 @@ class TSExecuteManager(private val project: Project) {
 
 		val packageRef = detectPackageRef()
 		propertiesComponent.setValue(TS_EXECUTE_PACKAGE_REF_PROPERTY_KEY, identifier)
-		return packageRef;
+		return packageRef
 	}
 
 	private fun detectPackageRef(): NodePackageRef {
