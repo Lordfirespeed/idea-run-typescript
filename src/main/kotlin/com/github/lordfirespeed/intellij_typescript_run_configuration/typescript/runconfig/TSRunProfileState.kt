@@ -64,7 +64,7 @@ class TSRunProfileState(
 	companion object {
 		@Throws(ExecutionException::class)
 		fun configureNodeTargetRun(targetRun: NodeTargetRun, runSettings: TSRunSettings) {
-			targetRun.configureEnvironment(runSettings.envData)
+			targetRun.envData = runSettings.envData
 
 			val expandedNodeOptions = ProgramParametersConfigurator.expandMacrosAndParseParameters(runSettings.nodeOptions)
 			targetRun.addNodeOptionsWithExpandedMacros(true, ParametersListUtil.join(expandedNodeOptions))
