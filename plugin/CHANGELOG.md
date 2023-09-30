@@ -30,5 +30,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * use a version catalog
 * use Gradle tasks instead of JavaScript to patch XML
 
-## [Past]
+## [1.0.0]
+
 See [`bluelovers/idea-run-typescript`](https://github.com/bluelovers/idea-run-typescript/blob/3fc04b125b6494956ac6a7c150da935392410345/CHANGELOG.md)
