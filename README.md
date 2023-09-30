@@ -1,8 +1,8 @@
 # Intellij TypeScript Run Configuration
 
 ![Build](https://github.com/Lordfirespeed/intellij-typescript-run-configuration/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/com.github.lordfirespeed.intellij-typescript-run-configuration.svg)](https://plugins.jetbrains.com/plugin/com.github.lordfirespeed.intellij-typescript-run-configuration)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/com.github.lordfirespeed.intellij-typescript-run-configuration.svg)](https://plugins.jetbrains.com/plugin/com.github.lordfirespeed.intellij-typescript-run-configuration)
+[![Version](https://img.shields.io/jetbrains/plugin/v/22824-run-configuration-for-typescript.svg)](https://plugins.jetbrains.com/plugin/22824-run-configuration-for-typescript)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/22824-run-configuration-for-typescript.svg)](https://plugins.jetbrains.com/plugin/22824-run-configuration-for-typescript)
 
 ## Description
 
