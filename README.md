@@ -1,88 +1,43 @@
+# Intellij TypeScript Run Configuration
+
+![Build](https://github.com/Lordfirespeed/intellij-typescript-run-configuration/workflows/Build/badge.svg)
+[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+
+## Description
+
 <!-- Plugin description -->
-[![jetbrains.svg](.github/readme/jetbrains.svg)](https://www.jetbrains.com/?from=novel-segment)
 
-# Run Configuration for TypeScript
+This IntelliJ Platform plugin adds a run configuration template for TypeScript.
 
-    IntelliJ Platform plugin that adds a run configuration template for TypeScript
+### Main Features
 
-# requirements
+- Allows 'Current File' run configuration for TypeScript (`.ts`) files
+- Supports TypeScript scratch files
+- Supports selecting a TypeScript project file (`.tsconfig`)
+- Supports debugging
 
-- plugin: [NodeJS](https://plugins.jetbrains.com/plugin/6098-nodejs)
-
-# install
-
-1. via jetbrains [https://plugins.jetbrains.com/plugin/10841-run-configuration-for-typescript](https://plugins.jetbrains.com/plugin/10841-run-configuration-for-typescript)
-2. github [idea-run-typescript.jar](releases/idea-run-typescript.jar) /  [idea-run-typescript.zip](releases/idea-run-typescript.zip)
-
-# features
-
-- run .tsx? by ts-node like bin tool (e.g. ts-node , [esm-ts-node](https://www.npmjs.com/package/esm-ts-node))
-- allow use env var `NODEJS_CONSOLE_USE_TERMINAL` for control Registry `nodejs.console.use.terminal` in Run Configuration bu this plugin
-- support debug mode
-- support set tsconfig
-- support set argv for node, ts-node, current file
-- support scratch file
-
-[CHANGELOG.md](plugin/CHANGELOG.md)
-
-# screenshots
-
-> support run/debug `.ts` , `.tsx`
-
-![ShareX_2020-03-04-00-11-01-496.png](.github/readme/ShareX_2020-03-04-00-11-01-496.png)
-
-> support scratch file
-
-![ShareX_2020-02-19-13-20-08-028.png](.github/readme/ShareX_2020-02-19-13-20-08-028.png)
-
-> support select `esm-ts-node`, `ts-node`
-
-![ShareX_2020-03-04-00-06-57-786.png](.github/readme/ShareX_2020-03-04-00-06-57-786.png)
-
-> other
-
-![run001.jpg](.github/readme/run001.jpg)
-![run002.jpg](.github/readme/run002.jpg)
-![run003.jpg](.github/readme/run003.jpg)
-
-# about this plugin
-
-this is my first time touch kotlin/java
-
-this plugin made by
-
-1. copy / paste form many plugin
-2. idea auto complete api
-3. google lol
-
-# dev
-
-## IDEA 2019.1.4
-
-```
-IntelliJ IDEA 2019.1.4 (Ultimate Edition)
-Build #IU-191.8026.42, built on July 30, 2019
-JRE: 1.8.0_212-release-1586-b4 amd64
-JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o
-Windows 10 10.0
-```
-
-![](.github/readme/ShareX_2020-02-18-21-02-20-415.png)
-
-## links
-
-- https://github.com/JetBrains/intellij-community
-- https://zh.wikipedia.org/wiki/Kotlin
-- https://www.kotlincn.net/
-- https://github.com/t3hnar/CmdSupport
-- https://github.com/jasmine/IdeaJasmine
-- https://github.com/jansorg/BashSupport
-- https://github.com/TypeStrong/ts-node
-- https://github.com/xiyuan-fengyu/IdeaPluginTypeScriptExecutor
-- https://github.com/nguyennk92/run-typescript-plugin
-- https://plugins.jetbrains.com/docs/marketplace/intellij-plugin-recommendations.html
--
-
-Icons made by [Freepik](https://www.freepik.com/) are sourced from [www.flaticon.com](https://www.flaticon.com/)
-and are licensed by [CC 3.0 BY](https://creativecommons.org/licenses/by/3.0/)
 <!-- Plugin description end -->
+
+## Dependencies
+
+Bundled JetBrains Platform plugins:
+- [JavaScript and TypeScript](https://plugins.jetbrains.com/plugin/22069-javascript-and-typescript)
+- [NodeJS](https://plugins.jetbrains.com/plugin/6098-nodejs)
+- [JavaScript Debugger](https://plugins.jetbrains.com/plugin/17562-javascript-debugger)
+
+## Installation
+
+Install via JetBrains plugin marketplace, either in-browser or in your JetBrains IDE.
+
+## About
+
+This project is largely a rewrite of @bluelovers' [`idea-run-typescript` plugin](https://github.com/bluelovers/idea-run-typescript).
+
+Some implementation mirrors JetBrains' `npm`, `node` and `jest` Run Configuration implementations @ Intellij Platform build 222.
+
+Credit to [`intellij-rust`](https://github.com/intellij-rust/intellij-rust) for build scripts and project structure.
+
+Icon made by [Freepik](https://www.freepik.com/) is sourced from [www.flaticon.com](https://www.flaticon.com/)
+and licensed by [Creative Commons 3.0](https://creativecommons.org/licenses/by/3.0/)
+
