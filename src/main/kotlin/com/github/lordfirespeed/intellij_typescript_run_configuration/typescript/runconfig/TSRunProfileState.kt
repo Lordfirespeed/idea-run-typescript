@@ -16,8 +16,8 @@ import com.intellij.javascript.nodejs.NodeStackTraceFilter
 import com.intellij.javascript.nodejs.debug.NodeCommandLineOwner
 import com.intellij.javascript.nodejs.execution.NodeBaseRunProfileState
 import com.intellij.javascript.nodejs.execution.NodeTargetRun
+import com.intellij.javascript.nodejs.execution.NodeTargetRunOptions
 import com.intellij.lang.javascript.buildTools.TypeScriptErrorConsoleFilter
-import com.intellij.util.ThreeState
 import com.intellij.util.execution.ParametersListUtil
 import java.io.File
 
@@ -42,12 +42,9 @@ class TSRunProfileState(
 			nodeInterpreter,
 			environment.project,
 			configurator,
-			NodeTargetRun.createOptions(
-				ThreeState.UNSURE,
-				listOf(),
-				true,
-				null,
-				environment.runProfile as TSRunConfiguration
+			NodeTargetRunOptions.of(
+				NodeTargetRunOptions.shouldUsePtyForTestRunners(),
+				this.runConfiguration
 			)
 		)
 		configureNodeTargetRun(targetRun, runSettings)
