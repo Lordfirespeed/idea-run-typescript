@@ -95,7 +95,6 @@ object TSExecuteUtil {
 		val expandedApplicationParameters = ProgramParametersConfigurator.expandMacrosAndParseParameters(runSettings.applicationParameters)
 
 		commandLine.addParameters(expandedApplicationParameters)
-		NodeCommandLineUtil.prependNodeDirToPATH(targetRun)
 	}
 
 	fun resolveRef(ref: NodePackageRef, project: Project, interpreter: NodeJsInterpreter): NodePackage? {
