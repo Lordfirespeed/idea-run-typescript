@@ -18,8 +18,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### 📦　Code Refactoring
 
-* package name `io.plugin.tsnode` -> `com.github.bluelovers.idea_ts_run_configuration`
-* near full rewrite to use modern JetBrains API and remove references to deprecated members
+* package name `io.plugin.tsnode` -> `com.github.lordfirespeed.intellij_typescript_run_configuration`
+* near full rewrite to use (more) modern JetBrains API and remove references to deprecated members
 
 
 ### 🛠　Build System
