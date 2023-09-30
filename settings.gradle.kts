@@ -1,4 +1,4 @@
-rootProject.name = "idea-ts-run-configuration"
+rootProject.name = "intellij-typescript-run-configuration"
 
 include("plugin")
 
