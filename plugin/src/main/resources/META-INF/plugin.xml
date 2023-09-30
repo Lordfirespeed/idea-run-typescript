@@ -2,7 +2,7 @@
   <id>com.github.lordfirespeed.intellij-typescript-run-configuration</id>
   <name>Run Configuration for TypeScript</name>
 
-  <vendor email="codelovers@users.sourceforge.net" url="https://github.com/bluelovers/idea-run-typescript">bluelovers</vendor>
+  <vendor email="intellij-plugin@joeclack.me.uk" url="https://github.com/Lordfirespeed">Joe Clack</vendor>
   <category>JavaScript</category>
 
   <xi:include href="/META-INF/plugin-core.xml" xpointer="xpointer(/idea-plugin/*)"/>
