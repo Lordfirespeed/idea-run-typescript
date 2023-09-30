@@ -4,6 +4,7 @@
 
   <vendor email="intellij-plugin@joeclack.me.uk" url="https://github.com/Lordfirespeed">Joe Clack</vendor>
   <category>JavaScript</category>
+  <category>Productivity</category>
 
   <xi:include href="/META-INF/plugin-core.xml" xpointer="xpointer(/idea-plugin/*)"/>
 </idea-plugin>
