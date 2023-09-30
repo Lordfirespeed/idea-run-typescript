@@ -1,4 +1,4 @@
-<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude" url="https://github.com/bluelovers/idea-run-typescript">
+<idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude" url="https://github.com/Lordfirespeed/intellij-typescript-run-configuration">
   <id>com.github.lordfirespeed.intellij-typescript-run-configuration</id>
   <name>Run Configuration for TypeScript</name>
 
