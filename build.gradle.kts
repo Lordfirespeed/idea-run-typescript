@@ -104,7 +104,7 @@ allprojects {
 		compileOnly(kotlin("stdlib"))
 		compileOnly(kotlin("reflect"))
 
-		testCompileOnly("junit:junit:4.11")
+		testCompileOnly("junit:junit:4.13.1")
 	}
 }
 
