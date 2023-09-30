@@ -5,7 +5,7 @@ import com.intellij.javascript.nodejs.util.NodePackage
 import com.intellij.javascript.nodejs.util.NodePackageRef
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.project.Project
-import com.twelvemonkeys.lang.StringUtil
+import com.intellij.openapi.util.text.StringUtil
 
 
 @Service(Service.Level.PROJECT)
@@ -15,7 +15,7 @@ class TSExecuteManager(private val project: Project) {
 		set(value) {
 			field = value
 			var identifier: String? = value.identifier
-			if (StringUtil.isEmpty(identifier)) {
+			if (StringUtil.isEmptyOrSpaces(identifier)) {
 				identifier = null
 			}
 			PropertiesComponent.getInstance(project).setValue(TS_EXECUTE_PACKAGE_REF_PROPERTY_KEY, identifier)
@@ -25,7 +25,7 @@ class TSExecuteManager(private val project: Project) {
 		val propertiesComponent = PropertiesComponent.getInstance(project)
 		val identifier = propertiesComponent.getValue(TS_EXECUTE_PACKAGE_REF_PROPERTY_KEY)
 
-		if (!StringUtil.isEmpty(identifier)) return TSExecuteUtil.DESCRIPTOR.createPackageRef(identifier!!)
+		if (!StringUtil.isEmptyOrSpaces(identifier)) return TSExecuteUtil.DESCRIPTOR.createPackageRef(identifier!!)
 		if (project.isDefault) return NodePackageRef.create(NodePackage(""))
 
 		val packageRef = detectPackageRef()
