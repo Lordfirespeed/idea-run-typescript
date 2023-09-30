@@ -6,7 +6,6 @@ import com.intellij.execution.ExecutionException
 import com.intellij.execution.target.TargetedCommandLineBuilder
 import com.intellij.execution.util.ProgramParametersConfigurator
 import com.intellij.ide.scratch.ScratchUtil
-import com.intellij.javascript.nodejs.NodeCommandLineUtil
 import com.intellij.javascript.nodejs.execution.NodeTargetRun
 import com.intellij.javascript.nodejs.interpreter.NodeJsInterpreter
 import com.intellij.javascript.nodejs.util.DefaultNodePackageRefResolver
