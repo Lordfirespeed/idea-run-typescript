@@ -1,6 +1,6 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig
 
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationIcons
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationIcons
 import com.intellij.execution.configurations.ConfigurationFactory
 import com.intellij.execution.configurations.ConfigurationType
 import com.intellij.execution.configurations.RunConfiguration

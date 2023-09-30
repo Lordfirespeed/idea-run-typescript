@@ -1,6 +1,6 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig
 
-import com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.ui.TSRunConfigurationEditor
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.ui.TSRunConfigurationEditor
 import com.intellij.execution.ExecutionException
 import com.intellij.execution.Executor
 import com.intellij.execution.configurations.ConfigurationFactory

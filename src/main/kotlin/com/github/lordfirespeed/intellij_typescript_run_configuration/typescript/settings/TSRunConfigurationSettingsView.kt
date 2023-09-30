@@ -1,7 +1,7 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.settings
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.settings
 
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationBundle
-import com.github.bluelovers.idea_ts_run_configuration.typescript.TSExecutePackageDescriptor
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationBundle
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.TSExecutePackageDescriptor
 import com.intellij.javascript.nodejs.util.DefaultNodePackageRefResolver
 import com.intellij.javascript.nodejs.util.NodePackageField
 import com.intellij.javascript.nodejs.util.NodePackageRef

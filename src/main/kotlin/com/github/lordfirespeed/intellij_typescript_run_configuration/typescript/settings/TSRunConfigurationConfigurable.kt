@@ -1,7 +1,7 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.settings
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.settings
 
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationBundle
-import com.github.bluelovers.idea_ts_run_configuration.typescript.TSExecuteManager
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationBundle
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.TSExecuteManager
 import com.intellij.javascript.nodejs.util.NodePackageRef
 import com.intellij.openapi.options.Configurable
 import com.intellij.openapi.options.SearchableConfigurable

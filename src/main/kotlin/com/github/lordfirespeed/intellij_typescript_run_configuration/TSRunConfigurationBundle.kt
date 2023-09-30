@@ -1,4 +1,4 @@
-package com.github.bluelovers.idea_ts_run_configuration
+package com.github.lordfirespeed.intellij_typescript_run_configuration
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.Nls

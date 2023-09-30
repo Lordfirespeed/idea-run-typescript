@@ -9,11 +9,11 @@
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
-    <configurationType implementation="com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunConfigurationType"/>
-    <runConfigurationProducer implementation="com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunConfigurationProducer"/>
+    <configurationType implementation="com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.TSRunConfigurationType"/>
+    <runConfigurationProducer implementation="com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.TSRunConfigurationProducer"/>
     <projectConfigurable id="settings.typescript.runconfig.execute"
                          parentId="settings.typescriptcompiler"
-                         instance="com.github.bluelovers.idea_ts_run_configuration.typescript.settings.TSRunConfigurationConfigurable"
+                         instance="com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.settings.TSRunConfigurationConfigurable"
                          key="settings.typescript.execute.configurable.name"
                          bundle="messages.TSRunConfigurationBundle"
                          order="last"/>

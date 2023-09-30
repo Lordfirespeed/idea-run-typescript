@@ -3,7 +3,7 @@
 
 # Run Configuration for TypeScript
 
-    IntelliJ IDEA (and WebStorm...) plugin to support 'TypeScript' as a run configuration
+    IntelliJ Platform plugin that adds a run configuration template for TypeScript
 
 # requirements
 

@@ -1,7 +1,7 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript
 
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationBundle
-import com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunSettings
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationBundle
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.TSRunSettings
 import com.intellij.execution.ExecutionException
 import com.intellij.execution.target.TargetedCommandLineBuilder
 import com.intellij.execution.util.ProgramParametersConfigurator

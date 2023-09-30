@@ -1,9 +1,9 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.ui
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.ui
 
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationBundle
-import com.github.bluelovers.idea_ts_run_configuration.typescript.TSExecuteUtil
-import com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunConfiguration
-import com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig.TSRunSettings
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationBundle
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.TSExecuteUtil
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.TSRunConfiguration
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig.TSRunSettings
 import com.intellij.execution.configuration.EnvironmentVariablesTextFieldWithBrowseButton
 import com.intellij.execution.ui.CommonProgramParametersPanel
 import com.intellij.javascript.nodejs.interpreter.NodeJsInterpreterField

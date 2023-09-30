@@ -1,4 +1,4 @@
-package com.github.bluelovers.idea_ts_run_configuration.javascript.nodejs.entrypoint
+package com.github.lordfirespeed.intellij_typescript_run_configuration.javascript.nodejs.entrypoint
 
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken

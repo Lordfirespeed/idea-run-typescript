@@ -1,4 +1,4 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript
 
 import com.intellij.javascript.nodejs.interpreter.NodeJsInterpreter
 import com.intellij.javascript.nodejs.util.NodePackage

@@ -1,6 +1,6 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig
 
-import com.github.bluelovers.idea_ts_run_configuration.typescript.TSExecuteUtil
+import com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.TSExecuteUtil
 import com.intellij.execution.configuration.EnvironmentVariablesData
 import com.intellij.javascript.nodejs.interpreter.NodeJsInterpreterRef
 import com.intellij.javascript.nodejs.util.NodePackageRef
@@ -77,7 +77,8 @@ data class TSRunSettings(
 		fun builder() = Builder()
 		inline fun build(block: Builder.() -> Unit) = Builder().apply(block).build()
 
-		fun readXml(element: Element): TSRunSettings {
+		fun readXml(element: Element): TSRunSettings
+		{
 			val thisBuilder = builder()
 
 			thisBuilder.apply {

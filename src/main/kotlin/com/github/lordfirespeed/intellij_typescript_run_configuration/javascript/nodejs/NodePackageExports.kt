@@ -1,7 +1,7 @@
-package com.github.bluelovers.idea_ts_run_configuration.javascript.nodejs
+package com.github.lordfirespeed.intellij_typescript_run_configuration.javascript.nodejs
 
-import com.github.bluelovers.idea_ts_run_configuration.javascript.nodejs.entrypoint.EntryPoint
-import com.github.bluelovers.idea_ts_run_configuration.javascript.nodejs.entrypoint.ObjectEntryPoint
+import com.github.lordfirespeed.intellij_typescript_run_configuration.javascript.nodejs.entrypoint.EntryPoint
+import com.github.lordfirespeed.intellij_typescript_run_configuration.javascript.nodejs.entrypoint.ObjectEntryPoint
 import kotlinx.collections.immutable.PersistentMap
 import kotlinx.collections.immutable.persistentMapOf
 import kotlinx.collections.immutable.toPersistentMap
@@ -54,7 +54,8 @@ data class NodePackageExports(
 			myExports?.filter { entry -> entry.key.matches(EXPORT_NAME_PATTERN) } ?.toPersistentMap()
 		)
 
-		fun build(): NodePackageExports {
+		fun build(): NodePackageExports
+		{
 			if (exportsAreObjectEntryPoint()) return buildWhenExportsAreObjectEntryPoint()
 			return buildWhenExportsAreValid()
 		}

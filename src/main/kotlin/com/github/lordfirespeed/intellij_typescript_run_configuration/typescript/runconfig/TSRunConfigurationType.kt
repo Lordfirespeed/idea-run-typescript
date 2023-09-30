@@ -1,7 +1,7 @@
-package com.github.bluelovers.idea_ts_run_configuration.typescript.runconfig
+package com.github.lordfirespeed.intellij_typescript_run_configuration.typescript.runconfig
 
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationBundle
-import com.github.bluelovers.idea_ts_run_configuration.TSRunConfigurationIcons
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationBundle
+import com.github.lordfirespeed.intellij_typescript_run_configuration.TSRunConfigurationIcons
 import com.intellij.execution.configurations.ConfigurationTypeBase
 import com.intellij.execution.configurations.ConfigurationTypeUtil
 import com.intellij.openapi.project.DumbAware

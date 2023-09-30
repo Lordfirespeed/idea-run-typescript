@@ -1,4 +1,4 @@
-package com.github.bluelovers.idea_ts_run_configuration
+package com.github.lordfirespeed.intellij_typescript_run_configuration
 
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.util.IconLoader
@@ -11,9 +11,9 @@ object TSRunConfigurationIcons {
 	val Debug = AllIcons.Actions.StartDebugger
 
 	@JvmField
-	val TypeScript = load("/com/github/bluelovers/idea_ts_run_configuration/icons/typescript@16.png")
+	val TypeScript = load("/com/github/lordfirespeed/intellij_typescript_run_configuration/icons/typescript@16.png")
 	@JvmField
-	val TypeScriptDebug = load("/com/github/bluelovers/idea_ts_run_configuration/icons/typescript-debug@16.png")
+	val TypeScriptDebug = load("/com/github/lordfirespeed/intellij_typescript_run_configuration/icons/typescript-debug@16.png")
 
 	private fun load(path: String): Icon
 	{

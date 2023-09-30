@@ -1,4 +1,4 @@
-package com.github.bluelovers.idea_ts_run_configuration.javascript.nodejs.entrypoint
+package com.github.lordfirespeed.intellij_typescript_run_configuration.javascript.nodejs.entrypoint
 
 import com.google.gson.stream.JsonReader
 import com.google.gson.stream.JsonToken
@@ -10,7 +10,8 @@ import java.io.File
 data class ObjectEntryPoint(
 	/** This is actually PersistentOrderedMap, but no interface for that is exposed. {@see https://github.com/Kotlin/kotlinx.collections.immutable/issues/106} */
 	val orderedEnvironmentToEntryPointMapping: PersistentMap<Environment, EntryPoint>
-) : EntryPoint {
+) : EntryPoint
+{
 	override fun resolve(context: EntryPoint.Context): File?
 	{
 		orderedEnvironmentToEntryPointMapping.forEach {
