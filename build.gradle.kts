@@ -269,7 +269,7 @@ project(":plugin") {
 
 project(":") {
 	intellij {
-		plugins.set(listOf("JavaScriptLanguage", "JavaScriptDebugger", "NodeJS"))
+		plugins.set(listOf("JavaScript", "JavaScriptDebugger", "NodeJS"))
 	}
 
 	tasks {
