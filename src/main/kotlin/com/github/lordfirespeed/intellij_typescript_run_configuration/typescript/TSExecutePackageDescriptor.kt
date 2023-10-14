@@ -40,9 +40,12 @@ class TSExecutePackageDescriptor(
 	}
 
 	override fun listPackageRefs(project: Project, interpreter: NodeJsInterpreter?, contextFileOrDirectory: VirtualFile?): MutableList<NodePackageRef> {
-		val packageRefs = super.listPackageRefs(project, interpreter, contextFileOrDirectory)
+		var packageRefs = super.listPackageRefs(project, interpreter, contextFileOrDirectory)
 
 		if (!isProjectFieldDescriptor) {
+			if (packageRefs.isEmpty()) {
+				packageRefs = ArrayList()
+			}
 			packageRefs.add(0, TSExecuteUtil.createProjectTsExecutePackageRef())
 		}
 
