@@ -5,7 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [Unreleased]
+## [2.0.1]
+
+### 🐛　Bug Fixes
+
+* don't try to add elements to the read-only `emptyList` !
+
+
+### 📦　Code Refactoring
+
+* Use Kotlin UI DSL v2 to create the run configuration settings editor
+
+
+## [2.0.0]
 
 ### ✨　Features
 
