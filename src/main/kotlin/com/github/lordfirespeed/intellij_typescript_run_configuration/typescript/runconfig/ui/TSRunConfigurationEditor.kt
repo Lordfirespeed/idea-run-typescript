@@ -11,7 +11,6 @@ import com.intellij.javascript.nodejs.util.DefaultNodePackageRefResolver
 import com.intellij.javascript.nodejs.util.NodePackageField
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.observable.properties.AtomicLazyProperty
-import com.intellij.openapi.observable.util.bindVisible
 import com.intellij.openapi.observable.util.transform
 import com.intellij.openapi.options.ConfigurationException
 import com.intellij.openapi.options.SettingsEditor
@@ -20,12 +19,12 @@ import com.intellij.openapi.ui.ComboBox
 import com.intellij.openapi.ui.TextFieldWithBrowseButton
 import com.intellij.ui.RawCommandLineEditor
 import com.intellij.ui.components.JBCheckBox
-import com.intellij.ui.dsl.builder.impl.CollapsibleTitledSeparatorImpl
-import com.intellij.util.ui.FormBuilder
+import com.intellij.ui.dsl.builder.AlignX
+import com.intellij.ui.dsl.builder.RowLayout
+import com.intellij.ui.dsl.builder.panel
 import com.intellij.util.ui.SwingHelper
 import com.intellij.webcore.ui.PathShortener
 import javax.swing.JComponent
-import javax.swing.JPanel
 
 class TSRunConfigurationEditor(project: Project): SettingsEditor<TSRunConfiguration>() {
 	private val interpreterField = NodeJsInterpreterField(project, false)
@@ -44,24 +43,11 @@ class TSRunConfigurationEditor(project: Project): SettingsEditor<TSRunConfigurat
 		)
 	)
 	private val selectedExecutePackageIdentifier = AtomicLazyProperty { executePackageField.selected.name }
-	private val executorOptionsField = RawCommandLineEditor().withMonospaced(false)
+	private val executePackageOptionsField = RawCommandLineEditor().withMonospaced(false)
 
 	// ts-node specific
 	private val selectedExecutePackageIsTsNode = selectedExecutePackageIdentifier.transform { it == TSExecuteUtil.TS_NODE_PACKAGE_NAME }
 	private val tsNodeUseEsmLoaderCheckbox = JBCheckBox(TSRunConfigurationBundle.message("rc.tsExecutePackage.ts-node.useEsmLoader.detail"))
-	private val tsNodeSpecificPanelToggle = CollapsibleTitledSeparatorImpl("ts-node Specific Options")
-	private val tsNodeSpecificPanelContent = FormBuilder()
-		.setFormLeftIndent(16)
-		.setAlignLabelOnRight(false)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.tsExecutePackage.ts-node.useEsmLoader.label"), tsNodeUseEsmLoaderCheckbox)
-		.panel
-		.bindVisible(tsNodeSpecificPanelToggle.expandedProperty)
-	private val tsNodeSpecificPanel = FormBuilder()
-		.setAlignLabelOnRight(false)
-		.addComponent(tsNodeSpecificPanelToggle)
-		.addComponent(tsNodeSpecificPanelContent)
-		.panel
-		.bindVisible(selectedExecutePackageIsTsNode)
 
 	// tsx specific
 	private val selectedExecutePackageIsTSX = selectedExecutePackageIdentifier.transform { it == TSExecuteUtil.TSX_PACKAGE_NAME || it == TSExecuteUtil.ESNO_PACKAGE_NAME }
@@ -70,46 +56,18 @@ class TSRunConfigurationEditor(project: Project): SettingsEditor<TSRunConfigurat
 		TSRunSettings.TSXLoaderType.ESM_ONLY,
 		TSRunSettings.TSXLoaderType.CJS_ONLY,
 	))
-	private val tsxSpecificPanelToggle = CollapsibleTitledSeparatorImpl("tsx Specific Options")
-	private val tsxSpecificPanelContent = FormBuilder()
-		.setFormLeftIndent(16)
-		.setAlignLabelOnRight(false)
-		.addLabeledComponent("Loader type:", tsxLoaderTypeComboBox)
-		.panel
-		.bindVisible(tsxSpecificPanelToggle.expandedProperty)
-	private val tsxSpecificPanel = FormBuilder()
-		.setAlignLabelOnRight(false)
-		.addComponent(tsxSpecificPanelToggle)
-		.addComponent(tsxSpecificPanelContent)
-		.panel
-		.bindVisible(selectedExecutePackageIsTSX)
 
 	private val scriptPathField = createScriptPathField(project)
 	private val applicationParametersField = RawCommandLineEditor().withMonospaced(false)
 	private val envDataField = EnvironmentVariablesTextFieldWithBrowseButton()
 
 	init {
-		executePackageField.addSelectionListener { print(it.name); selectedExecutePackageIdentifier.set(it.name) }
+		executePackageField.addSelectionListener { selectedExecutePackageIdentifier.set(it.name) }
 
 		CommonProgramParametersPanel.addMacroSupport(interpreterOptionsField.editorField)
-		CommonProgramParametersPanel.addMacroSupport(executorOptionsField.editorField)
+		CommonProgramParametersPanel.addMacroSupport(executePackageOptionsField.editorField)
 		CommonProgramParametersPanel.addMacroSupport(applicationParametersField.editorField)
 	}
-
-	private val panel: JPanel = FormBuilder()
-		.setAlignLabelOnRight(false)
-		.addLabeledComponent(NodeJsInterpreterField.getLabelTextForComponent(), interpreterField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.nodeOptions.label"), interpreterOptionsField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.workingDirectory.label"), workingDirectoryField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.tsProjectPath.label"), typescriptProjectFileField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.tsExecutePackage.label"), executePackageField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.tsExecuteOptions.label"), executorOptionsField)
-		.addComponent(tsNodeSpecificPanel)
-		.addComponent(tsxSpecificPanel)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.scriptPath.label"), scriptPathField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.applicationParameters.label"), applicationParametersField)
-		.addLabeledComponent(TSRunConfigurationBundle.message("rc.environmentVariables.label"), envDataField)
-		.panel
 
 	override fun resetEditorFrom(runConfiguration: TSRunConfiguration)
 	{
@@ -119,7 +77,7 @@ class TSRunConfigurationEditor(project: Project): SettingsEditor<TSRunConfigurat
 		workingDirectoryField.text = runSettings.workingDirectory
 		typescriptProjectFileField.text = runSettings.typescriptProjectFilePath
 		executePackageField.selectedRef = runSettings.executePackageRef
-		executorOptionsField.text = runSettings.executePackageOptions
+		executePackageOptionsField.text = runSettings.executePackageOptions
 
 		tsNodeUseEsmLoaderCheckbox.isSelected = runSettings.tsNodeUseEsmLoader
 
@@ -154,7 +112,63 @@ class TSRunConfigurationEditor(project: Project): SettingsEditor<TSRunConfigurat
 		runConfiguration.runSettings = settingsBuilder.build()
 	}
 
-	override fun createEditor(): JComponent = this.panel
+	override fun createEditor(): JComponent {
+		return panel {
+			row(NodeJsInterpreterField.getLabelTextForComponent()) {
+				cell(interpreterField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			row(TSRunConfigurationBundle.message("rc.nodeOptions.label")) {
+				cell(workingDirectoryField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			row(TSRunConfigurationBundle.message("rc.tsProjectPath.label")) {
+				cell(typescriptProjectFileField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			row(TSRunConfigurationBundle.message("rc.tsExecutePackage.label")) {
+				cell(executePackageField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			row(TSRunConfigurationBundle.message("rc.tsExecuteOptions.label")) {
+				cell(executePackageOptionsField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			collapsibleGroup("ts-node Specific Options") {
+				row(TSRunConfigurationBundle.message("rc.tsExecutePackage.ts-node.useEsmLoader.label")) {
+					cell(tsNodeUseEsmLoaderCheckbox)
+						.align(AlignX.FILL)
+				}.layout(RowLayout.PARENT_GRID)
+			}.visibleIf(selectedExecutePackageIsTsNode)
+
+			collapsibleGroup("tsx Specific Options") {
+				row("Loader type:") {
+					cell(tsxLoaderTypeComboBox)
+						.align(AlignX.FILL)
+				}.layout(RowLayout.PARENT_GRID)
+			}.visibleIf(selectedExecutePackageIsTSX)
+
+			row(TSRunConfigurationBundle.message("rc.scriptPath.label")) {
+				cell(scriptPathField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			row(TSRunConfigurationBundle.message("rc.applicationParameters.label")) {
+				cell(applicationParametersField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+
+			row(TSRunConfigurationBundle.message("rc.environmentVariables.label")) {
+				cell(envDataField)
+					.align(AlignX.FILL)
+			}.layout(RowLayout.PARENT_GRID)
+		}
+	}
 
 	companion object {
 		fun createWorkingDirField(project: Project): TextFieldWithBrowseButton {
