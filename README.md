@@ -15,7 +15,17 @@ This IntelliJ Platform plugin adds a run configuration template for TypeScript.
 - Allows 'Current File' run configuration for TypeScript (`.ts`) files
 - Supports TypeScript scratch files
 - Supports selecting a TypeScript project file (`.tsconfig`)
+- Supports selecting your TypeScript Execute package of choice. Supported packages:
+  - `ts-node`
+  - `tsx`
+  - `esno` (which is actually `tsx`)
+- Supports choosing a particular loader (e.g. CJS only, ESM only) for your package of choice
 - Supports debugging
+
+### Future Features
+These features can be implemented if interest is shown for them. 
+- 'Run interactively' run configuration analogous to 'Run in Python Console' 
+- Bun runtime support
 
 <!-- Plugin description end -->
 
